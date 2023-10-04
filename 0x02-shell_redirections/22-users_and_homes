@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -d: -f1 /etc/passwd | paste -d" " - /etc/passwd | cut -d" " -f1,7 | sort
+getent passwd | sort -t ':' -k 1,1
